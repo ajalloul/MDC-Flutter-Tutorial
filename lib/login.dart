@@ -71,12 +71,12 @@ class _LoginPageState extends State<LoginPage> {
                 RaisedButton(
                   child: Text('Next'),
                   onPressed: (){
-                    Navigator.pop(context);
+                    if(_usernameController.text.isNotEmpty && _passwordController.text.isNotEmpty)
+                      Navigator.pop(context);
                   },
                 )
               ],
             )
-            // TODO: Add button bar (101)
           ],
         ),
       ),
